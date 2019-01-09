@@ -8,8 +8,9 @@ public class UltrasonicAnalogSensor {
     double voltage;
     AnalogInput sensor;
   
-    public void UltrasonicSensor(int port) {
+    public void UltrasonicSensor(int port, double inchesPerVolt) {
         this.port = port;
+        this.inchesPerVolt = inchesPerVolt;
         sensor = new AnalogInput(port);
     }
     public int getPort() {
@@ -17,6 +18,9 @@ public class UltrasonicAnalogSensor {
     }
     public void setInchesPerVolt(double inchesPerVolt) {
         this.inchesPerVolt = inchesPerVolt;
+    }
+    public double getInchesPerVolt() {
+        return inchesPerVolt;
     }
     public double getDistance() {
         try {
