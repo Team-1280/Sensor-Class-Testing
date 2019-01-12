@@ -12,6 +12,6 @@ public class hallEffectSensor{
         return this.port;
     }
     public boolean get(){
-        return sensor.get();
+        return !sensor.get();
     }
 }
